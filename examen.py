@@ -1,4 +1,4 @@
-modelodedatos = ['nombre','telefono','email']
+modelodedatos = ['nombre','telefono','email','direccion']
 
 def menu():
     print("Escoge una opcion")
@@ -16,7 +16,7 @@ def menu():
     elif opcion == "3":
         print("Insertamos registros")
         for entidad in modelodedatos:
-            input("Introduce: "+entidad)
+            input("Introduce "+entidad+": ")
         print("Guardamos")
     elif opcion == "4":
         print("Actualizamos registros")
