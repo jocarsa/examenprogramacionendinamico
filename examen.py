@@ -19,3 +19,5 @@ def menu():
         print("Eliminamos registros")
     elif opcion == "6":
         print("Salimos")
+
+    menu()
