@@ -1,3 +1,5 @@
+import sys
+
 modelodedatos = ['nombre','descripcion','precio','peso','medidas']
 
 def menu():
@@ -49,6 +51,7 @@ def menu():
         archivo.close()
     elif opcion == "6":
         print("Salimos")
+        sys.exit()
 
     menu()
 
