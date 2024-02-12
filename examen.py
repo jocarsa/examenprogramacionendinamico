@@ -8,6 +8,14 @@ modelo = {
     'fechas':['fecha','pedido']
 }
 
+def introduccion():
+    print("╔══════════════════════════╗")
+    print("║ Programa de empresa v.01 ║")
+    print("║  Jose Vicente Carratalá  ║")
+    print("╚══════════════════════════╝")
+    input("Pulsa una tecla para continuar...")
+    menuprincipal()
+
 def limpiaPantalla():
     if os.name == 'nt':  
         os.system('cls')
@@ -100,4 +108,4 @@ def menu(modelodedatos,opcionseleccionada):
     input("Pulsa una tecla para continuar..."   )
     menu(modelodedatos,opcionseleccionada)
 
-menuprincipal()
+introduccion()
