@@ -16,7 +16,7 @@ def menu():
             print(linea)
         archivo.close()
     elif opcion == "2":
-        print("Listamos registros")
+        print("Buscamos registros")
         termino = input("Introduce el termino que buscar: ")
         archivo = open("datos.txt",'r')
         for linea in archivo:
