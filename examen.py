@@ -9,17 +9,12 @@ fechas = ['fecha','pedido']
 
 def menuprincipal():
     print("Escoge un mantenimiento:")
-    for opcion in mantenimientos:
-        print(opcion)
+    for indice,opcion in enumerate(mantenimientos):
+        print(indice,opcion)
     opcion = input("Escoge una opcion")
-    if opcion == "productos":
-        modelodedatos = productos
-    elif opcion == "clientes":
-        modelodedatos = clientes
-    elif opcion == "fechas":
-        modelodedatos = fechas
-    menu(modelodedatos,opcion)
-        
+    indice = int(opcion)
+    modelodedatos = globals()[mantenimientos[indice]]
+    menu(modelodedatos,mantenimientos[indice])    
 
 def menu(modelodedatos,opcionseleccionada):
     print("Escoge una opcion")
