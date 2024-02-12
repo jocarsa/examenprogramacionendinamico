@@ -1,5 +1,7 @@
+modelodedatos = ['nombre','telefono','email']
+
 def menu():
-    print("escoge una opcion")
+    print("Escoge una opcion")
     print("1.-Listar registros")
     print("2.-Buscar registros")
     print("3.-Insertar registros")
