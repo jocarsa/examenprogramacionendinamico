@@ -23,7 +23,8 @@ def menu(modelodedatos,opcionseleccionada):
     print("3.-Insertar registros")
     print("4.-Actualizar registros")
     print("5.-Eliminar registros")
-    print("6.-Salir")
+    print("6.-Menú principal")
+    print("7.-Salir")
     opcion = input("Opción escogida:")
     if opcion == "1":
         print("Listamos registros")
@@ -78,9 +79,12 @@ def menu(modelodedatos,opcionseleccionada):
         archivo.write(contenido)
         archivo.close()
     elif opcion == "6":
+        print("Menú principal")
+        menuprincipal()
+    elif opcion == "7":
         print("Salimos")
         sys.exit()
 
-    menuprincipal()
+    menu(modelodedatos,opcionseleccionada)
 
 menuprincipal()
