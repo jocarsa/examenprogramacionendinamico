@@ -6,4 +6,4 @@ def menu():
     print("4.-Actualizar registros")
     print("5.-Eliminar registros")
     print("6.-Salir")
-    
+    opcion = input("Opción escogida:")
