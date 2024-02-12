@@ -21,3 +21,5 @@ def menu():
         print("Salimos")
 
     menu()
+
+menu()
