@@ -27,8 +27,10 @@ def menuprincipal():
     print("Menú principal")
     print(":::::::::::::::::::::::")
     print("Escoge un mantenimiento:")
+    print("╔══╦═════════════════")
     for indice,opcion in enumerate(modelo):
-        print(indice,opcion)
+        print("║"+str(indice)+" ║"+opcion)
+    print("╚══╩═════════════════")
     opcion = input("Escoge una opcion: ")
     indice = int(opcion)
     categoria = list(modelo.keys())[indice]
