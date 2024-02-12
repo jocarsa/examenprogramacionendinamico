@@ -1,4 +1,4 @@
-modelodedatos = ['nombre','telefono','email','direccion']
+modelodedatos = ['nombre','descripcion','precio','peso','medidas']
 
 def menu():
     print("Escoge una opcion")
@@ -15,9 +15,14 @@ def menu():
         print("Buscamos registros")
     elif opcion == "3":
         print("Insertamos registros")
+        cadena = ""
         for entidad in modelodedatos:
-            input("Introduce "+entidad+": ")
+            cadena += input("Introduce "+entidad+": ")+","
+        cadena += "\n"
         print("Guardamos")
+        archivo = open("datos.txt",'a')
+        archivo.write(cadena)
+        archivo.close()
     elif opcion == "4":
         print("Actualizamos registros")
     elif opcion == "5":
