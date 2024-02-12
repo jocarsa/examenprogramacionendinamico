@@ -37,6 +37,16 @@ def menu():
         print("Actualizamos registros")
     elif opcion == "5":
         print("Eliminamos registros")
+        termino = input("Introduce el termino que eliminar: ")
+        archivo = open("datos.txt",'r')
+        contenido = ""
+        for linea in archivo:
+            if not termino in linea:
+                contenido += linea
+        archivo.close()
+        archivo = open("datos.txt",'w')
+        archivo.write(contenido)
+        archivo.close()
     elif opcion == "6":
         print("Salimos")
 

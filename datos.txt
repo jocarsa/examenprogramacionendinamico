@@ -1,3 +1,2 @@
 Mi producto,Este es mi producto,4,5,3x4x5,
-Zapatilla,Mi zapatilla,4,5,6,
 Nevera,Esta es mi nevera,3,4,5,
