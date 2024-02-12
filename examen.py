@@ -1,4 +1,5 @@
 import sys
+import os
 
 mantenimientos = ['productos','clientes','fechas']
 modelodedatos = ['1','2','3']
@@ -7,17 +8,29 @@ productos = ['nombre','descripcion','precio','peso','medidas']
 clientes = ['nombre','email','telefono']
 fechas = ['fecha','pedido']
 
+def limpiaPantalla():
+    if os.name == 'nt':  
+        os.system('cls')
+    else:  
+        os.system('clear')
+
 def menuprincipal():
+    limpiaPantalla()
+    print("Menú principal")
+    print(":::::::::::::::::::::::")
     print("Escoge un mantenimiento:")
     for indice,opcion in enumerate(mantenimientos):
         print(indice,opcion)
-    opcion = input("Escoge una opcion")
+    opcion = input("Escoge una opcion: ")
     indice = int(opcion)
     modelodedatos = globals()[mantenimientos[indice]]
     menu(modelodedatos,mantenimientos[indice])    
 
 def menu(modelodedatos,opcionseleccionada):
-    print("Escoge una opcion")
+    limpiaPantalla()
+    print("Menú "+opcionseleccionada)
+    print("::::::::::::::::::::")
+    print("Escoge una opcion: ")
     print("1.-Listar registros")
     print("2.-Buscar registros")
     print("3.-Insertar registros")
@@ -25,7 +38,7 @@ def menu(modelodedatos,opcionseleccionada):
     print("5.-Eliminar registros")
     print("6.-Menú principal")
     print("7.-Salir")
-    opcion = input("Opción escogida:")
+    opcion = input("Opción escogida: ")
     if opcion == "1":
         print("Listamos registros")
         archivo = open(opcionseleccionada+".txt",'r')
@@ -84,7 +97,7 @@ def menu(modelodedatos,opcionseleccionada):
     elif opcion == "7":
         print("Salimos")
         sys.exit()
-
+    input("Pulsa una tecla para continuar..."   )
     menu(modelodedatos,opcionseleccionada)
 
 menuprincipal()
