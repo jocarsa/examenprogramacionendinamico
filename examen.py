@@ -10,7 +10,11 @@ def menu():
     print("6.-Salir")
     opcion = input("Opción escogida:")
     if opcion == "1":
-        print("Listamos registros");
+        print("Listamos registros")
+        archivo = open("datos.txt",'r')
+        for linea in archivo:
+            print(linea)
+        archivo.close()
     elif opcion == "2":
         print("Buscamos registros")
     elif opcion == "3":
