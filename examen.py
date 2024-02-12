@@ -15,6 +15,9 @@ def menu():
         print("Buscamos registros")
     elif opcion == "3":
         print("Insertamos registros")
+        for entidad in modelodedatos:
+            input("Introduce: "+entidad)
+        print("Guardamos")
     elif opcion == "4":
         print("Actualizamos registros")
     elif opcion == "5":
