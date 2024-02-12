@@ -1,2 +1,2 @@
 Mi producto,Este es mi producto,4,5,3x4x5,
-Nevera,Esta es mi nevera,3,4,5,
+Esta es mi nevera,Y su descripcion,543,564,645,
