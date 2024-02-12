@@ -1,12 +1,12 @@
 import sys
 import os
 
-mantenimientos = ['productos','clientes','fechas']
-modelodedatos = ['1','2','3']
 
-productos = ['nombre','descripcion','precio','peso','medidas']
-clientes = ['nombre','email','telefono']
-fechas = ['fecha','pedido']
+modelo = {
+    'productos':['nombre','descripcion','precio','peso','medidas'],
+    'clientes':['nombre','email','telefono'],
+    'fechas':['fecha','pedido']
+}
 
 def limpiaPantalla():
     if os.name == 'nt':  
@@ -19,12 +19,12 @@ def menuprincipal():
     print("Menú principal")
     print(":::::::::::::::::::::::")
     print("Escoge un mantenimiento:")
-    for indice,opcion in enumerate(mantenimientos):
+    for indice,opcion in enumerate(modelo):
         print(indice,opcion)
     opcion = input("Escoge una opcion: ")
     indice = int(opcion)
-    modelodedatos = globals()[mantenimientos[indice]]
-    menu(modelodedatos,mantenimientos[indice])    
+    categoria = list(modelo.keys())[indice]
+    menu(modelo[categoria],categoria)    
 
 def menu(modelodedatos,opcionseleccionada):
     limpiaPantalla()
